@@ -16,15 +16,15 @@ export default {
   components: {
     NoteSelector
   },
-  props: ["notes"],
+  props: ["notes", "selectedNoteId"],
   data: function() {
     return {
-      selectedNoteId: 1
+      
     }
   },
   methods: {
     selectNote: function (note) {
-      this.selectedNoteId = note.id;
+      this.$emit("selectNote", note);
     }
   }
 }

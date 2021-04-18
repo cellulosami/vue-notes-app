@@ -3,6 +3,8 @@
     <Toolbar />
     <NoteContainer 
       v-bind:notes="notes"
+      v-bind:selectedNoteId="selectedNoteId"
+      v-on:selectNote="selectNote"
     />
   </div>
 </template>
@@ -20,10 +22,17 @@ export default {
   data: function () {
     return {
       notes: [
-        {id: 1, name: "Firmst", timestamp: Date.now() }, 
-        {id: 2, name: "Sarcund", timestamp: Date.now() }, 
-        {id: 3, name: "Throde", timestamp: Date.now() }
+        {id: 1, body: "Thars us am Firmst toast.", timestamp: Date.now() }, 
+        {id: 2, body: "Thars us am Sarcund toast.", timestamp: Date.now() }, 
+        {id: 3, body: "Thars us am Throde toast.", timestamp: Date.now() },
+        {id: 4, body: "Thars us am Froth toast.", timestamp: Date.now() }
       ],
+      selectedNoteId: 1
+    }
+  },
+  methods: {
+    selectNote: function (note) {
+      this.selectedNoteId = note.id
     }
   }
 };
