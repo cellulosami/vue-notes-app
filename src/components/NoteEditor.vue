@@ -13,7 +13,7 @@
 
 /* LAYOUT */
 
-.note-editor {
+/* .note-editor {
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -29,7 +29,7 @@
   flex: 1;
   width: 100%;
   padding: 0 2em 0 2em;
-}
+} */
 
 /* COLORS */
 

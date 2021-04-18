@@ -34,9 +34,9 @@ export default {
 
 /* LAYOUT */
 
-.note-selectors {
+/* .note-selectors {
   flex: 0 0 13em;
-}
+} */
 
 /* COLORS */
 

@@ -25,13 +25,13 @@ export default {
 </script>
 
 <style scoped>
-.note-selector {
+/* .note-selector {
   padding: 1em;
 }
 
 .note-selector p {
   margin: 0;
-}
+} */
 
 .note-selector {
   border-bottom: 1px solid #DCDADC;

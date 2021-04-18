@@ -31,9 +31,9 @@ export default {
 
 /* LAYOUT */
 
-.note-container {
+/* .note-container {
   display: flex;
   flex: 1;
-}
+} */
 
 </style>

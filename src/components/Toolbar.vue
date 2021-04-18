@@ -10,7 +10,7 @@
 
 /* LAYOUT */
 
-.toolbar {
+/* .toolbar {
   padding: 0.5em;
 }
 
@@ -21,7 +21,7 @@
 
 .toolbar-search {
   float: right;
-}
+} */
 
 /* COLORS */
 

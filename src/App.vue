@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Map />
     <Toolbar />
     <NoteContainer 
       v-bind:notes="notes"
@@ -12,12 +13,14 @@
 <script>
 import Toolbar from "./components/Toolbar.vue"
 import NoteContainer from "./components/NoteContainer.vue"
+import Map from "./components/Map.vue"
 
 export default {
   name: 'app',
   components: {
     Toolbar,
-    NoteContainer
+    NoteContainer,
+    Map,
   },
   data: function () {
     return {
@@ -42,21 +45,21 @@ export default {
 
 /* RESET */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   border: 0;
   outline: none;
   box-sizing: border-box;
-}
+} */
 
 /* LAYOUT */
 
-#app {
+/* #app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
+} */
 
 /* COLORS */
 
