@@ -1,12 +1,27 @@
 <template>
-  <div class="note-selector">
-    <p class="note-selector-title">Firmst normt...</p>
+  <div 
+    class="note-selector" 
+    v-bind:class="{active: note.id === selectedNoteId}"
+    v-on:click="selectNote"
+  >
+    <p class="note-selector-title">{{ note.name }} normt...</p>
     <p class="note-selector-timestamp">Tommshtulmp henrr...</p>
   </div>
 </template>
 
 <script>
-
+export default {
+  props: [
+    "note",
+    "selectedNoteId"
+  ],
+  methods: {
+    selectNote: function () {
+      console.log(`selected ${this.note.id}`)
+      this.$emit("selectNote", this.note.id);
+    }
+  }
+}
 </script>
 
 <style scoped>

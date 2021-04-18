@@ -1,6 +1,10 @@
 <template>
   <div class="note-selectors">
-    <NoteSelector class="active" v-for="note in notes"/>
+    <NoteSelector 
+      v-for="note in notes" 
+      v-bind:note="note" 
+      v-bind:selectedNoteId="selectedNoteId" 
+    />
   </div>
 </template>
 
@@ -13,7 +17,17 @@ export default {
   },
   data: function() {
     return {
-      notes: ["Firmst", "Sarcund", "Throde"]
+      notes: [
+        {id: 1, name: "Firmst", timestamp: Date.now() }, 
+        {id: 2, name: "Sarcund", timestamp: Date.now() }, 
+        {id: 3, name: "Throde", timestamp: Date.now() }
+      ],
+      selectedNoteId: 1
+    }
+  },
+  methods: {
+    selectNote: function (id) {
+      this.selectedNoteId = id;
     }
   }
 }
@@ -27,18 +41,10 @@ export default {
   flex: 0 0 13em;
 }
 
-
-
 /* COLORS */
 
 .note-selectors {
   border-right: 1px solid #DCDADC;
 }
-
-
-
-/* TYPOGRAPHY */
-
-
 
 </style>
