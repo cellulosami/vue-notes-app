@@ -18,7 +18,7 @@ export default {
   methods: {
     selectNote: function () {
       console.log(`selected ${this.note.id}`)
-      this.$emit("selectNote", this.note.id);
+      this.$emit("selectNote", this.note);
     }
   }
 }

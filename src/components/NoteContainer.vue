@@ -1,6 +1,8 @@
 <template>
   <div class="note-container">
-    <NoteSelectors />
+    <NoteSelectors 
+      v-bind:notes="notes"
+    />
     <NoteEditor />
   </div>
 </template>
@@ -13,7 +15,8 @@ export default {
   components: {
     NoteSelectors,
     NoteEditor
-  }
+  },
+  props: ["notes"]
 }
 </script>
 

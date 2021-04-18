@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Toolbar />
-    <NoteContainer />
+    <NoteContainer 
+      v-bind:notes="notes"
+    />
   </div>
 </template>
 
@@ -14,6 +16,15 @@ export default {
   components: {
     Toolbar,
     NoteContainer
+  },
+  data: function () {
+    return {
+      notes: [
+        {id: 1, name: "Firmst", timestamp: Date.now() }, 
+        {id: 2, name: "Sarcund", timestamp: Date.now() }, 
+        {id: 3, name: "Throde", timestamp: Date.now() }
+      ],
+    }
   }
 };
 </script>

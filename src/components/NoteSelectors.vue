@@ -4,6 +4,7 @@
       v-for="note in notes" 
       v-bind:note="note" 
       v-bind:selectedNoteId="selectedNoteId" 
+      v-on:selectNote="selectNote"
     />
   </div>
 </template>
@@ -15,19 +16,15 @@ export default {
   components: {
     NoteSelector
   },
+  props: ["notes"],
   data: function() {
     return {
-      notes: [
-        {id: 1, name: "Firmst", timestamp: Date.now() }, 
-        {id: 2, name: "Sarcund", timestamp: Date.now() }, 
-        {id: 3, name: "Throde", timestamp: Date.now() }
-      ],
       selectedNoteId: 1
     }
   },
   methods: {
-    selectNote: function (id) {
-      this.selectedNoteId = id;
+    selectNote: function (note) {
+      this.selectedNoteId = note.id;
     }
   }
 }
